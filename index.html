@@ -21,7 +21,6 @@
         .title-container {
             text-align: center;
             margin-bottom: 2rem;
-            white-space: nowrap; /* Prevents line breaking */
             max-width: 100%; /* Constrains width on desktop but allows full width on mobile */
             overflow: visible; /* Allows content to be visible outside the container */
         }
@@ -40,7 +39,8 @@
                 3px 3px 0 #ff5aad,
                 6px 6px 0 rgba(0, 0, 0, 0.2);
             letter-spacing: 2px;
-            display: inline-block; /* Helps maintain the text as a single unit */
+            white-space: nowrap; /* Prevents line breaking just for the main title */
+            display: block; /* Makes it take its own line */
         }
 
         .title-sub {
@@ -48,7 +48,7 @@
             color: #9c6bff;
             text-shadow: 2px 2px 0 #cea9ff;
             letter-spacing: 1px;
-            display: inline-block; /* Keeps the subtitle on one line */
+            display: block; /* Ensures it's on a new line */
         }
 
         .image-container {

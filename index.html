@@ -21,10 +21,13 @@
         .title-container {
             text-align: center;
             margin-bottom: 2rem;
+            white-space: nowrap; /* Prevents line breaking */
+            max-width: 100%; /* Constrains width on desktop but allows full width on mobile */
+            overflow: visible; /* Allows content to be visible outside the container */
         }
 
         .title-main {
-            font-size: 4.5rem;
+            font-size: clamp(2.5rem, 9vw, 4.5rem); /* Responsive font size */
             font-weight: bold;
             text-align: center;
             margin-bottom: 0.5rem;
@@ -37,13 +40,15 @@
                 3px 3px 0 #ff5aad,
                 6px 6px 0 rgba(0, 0, 0, 0.2);
             letter-spacing: 2px;
+            display: inline-block; /* Helps maintain the text as a single unit */
         }
 
         .title-sub {
-            font-size: 2.5rem;
+            font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive font size */
             color: #9c6bff;
             text-shadow: 2px 2px 0 #cea9ff;
             letter-spacing: 1px;
+            display: inline-block; /* Keeps the subtitle on one line */
         }
 
         .image-container {
